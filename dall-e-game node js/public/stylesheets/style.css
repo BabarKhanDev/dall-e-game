@@ -1,0 +1,385 @@
+@keyframes reveal {
+  from {font-size:0em; }
+  to {font-size:1em;}
+}
+
+@keyframes scoreReveal {
+  from {width:0;font-size:0em;border: solid 0px black;}
+  to {width:30vh;font-size:1em;border: solid 3px black;}
+}
+
+@keyframes voteReveal {
+  from {width:0;height:0;font-size:0em;}
+  to {width:4vh;height:4vh;font-size:1em;}
+}
+
+@keyframes scoreboardReveal {
+  from {width:0%;font-size:0em;}
+  to {width:100%;font-size:1.5em;}
+}
+
+@keyframes countdown {
+  from {width:70%;background-color:rgb(70, 184, 70);}
+  to {width:0%;background-color:red;}
+}
+
+body {
+  font: 2em "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color:#f0ead6;
+  width:100%;
+  height:90vh;
+  
+
+}
+
+h1, h2, h3{
+  width:100%;
+  text-align:center;
+  font-family: 'Rubik', sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#game {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  height:80vh;
+}
+
+.mobile {
+  /*background-color:#ffffff;*/
+  font-size:1.5em;
+  width:70%;
+  height:4vh;
+  margin-bottom:2vh;
+  border-radius:10px;
+}
+
+form {
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*These are for the styles for stage 0*/
+
+.usernameSeparator{
+  display:flex;
+  flex-direction: row;
+  width:50%;
+  justify-content:left;
+}
+
+.scoreContainerIntro{
+  border: solid 3px black;
+  text-align:center;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  width:30vh;
+  min-height:5vh;
+  margin-bottom:2vh;
+  margin-right:2vh;
+  background-color: rgb(255, 255, 255);
+  font-size:1em;
+}
+
+/*These are for the styles for the stage 1 display*/
+#displayBody{
+  width:100%;
+  height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction: column;
+  text-transform: capitalize;
+}
+
+.Column{
+  width:50%;
+  height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column
+}
+
+/*These are the styles for the stage 2 display*/
+.promptContainer{
+  text-align:center;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  width:30vh;
+  min-height:5vh;
+  margin-bottom:2vh;
+  margin-right:2vh;
+}
+
+.userPrompt {
+  border: solid 3px rgb(0, 0, 0);
+  width:70%;
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+  margin-bottom:-3vh;
+  background-color:white;
+  text-transform:capitalize;
+}
+
+.stage2div {
+  margin-bottom:1vh;
+}
+
+#usernameSubmit, #promptSubmit {
+  font-size:1em;
+  width:60%;
+  text-transform: capitalize;
+  height:4vh;
+  background-color:#BEE5B0;
+}
+
+.usernameSubmit:hover{
+  cursor:pointer;
+}
+
+.promptSubmit:hover{
+  cursor:pointer;
+}
+
+.userPrompt p {
+  width:100%;
+  height:100%;
+}
+
+.userReveal{
+  border: solid 3px #D5AAFF;
+  border-radius:100%;
+  padding:1em;
+  margin-bottom:2vh;
+  max-width:7vh;
+  max-height:7vh;
+}
+
+.userWhoWroteThis{  
+  font-size:0em;
+  animation-delay:3s;
+  animation-name: reveal;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode:forwards;
+  margin-top:1vh;
+  margin-bottom:1vh;
+  border-bottom: solid 3px #D5AAFF;
+  text-transform: uppercase;
+}
+
+.whatTheUserWrote{
+  margin-top:1vh;
+  margin-bottom:4vh;
+}
+
+.stage2p{
+  margin-top:2vh;
+  margin-bottom:2vh;
+}
+
+.usersWhoVoted{
+  width:100%;
+  height:4vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.voterLabel{
+  border: solid 1px gray;
+  display:flex;
+  align-items:center; 
+  justify-content:center;
+  width:0vh;
+  height:0vh;
+  font-size:0em;
+  background-color:#BFFCC6;
+  border-radius:100%;
+  text-transform: capitalize;
+  animation-name: voteReveal;
+  animation-duration: 1s;
+  animation-delay:1s;
+  animation-iteration-count: 1;
+  animation-fill-mode:forwards;
+}
+
+#image {
+  min-width:70vh;
+  min-height:70vh;
+  border: solid 5px black;
+  border-radius: 2%;
+}
+
+#centeredBody {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.doubleColumn{
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+}
+
+.prompts,.imageDiv{
+  width:50%;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction:row;
+  flex-wrap: wrap;
+}
+
+/*These are the styles for stage 3 of the display*/
+.scoreContainer{
+  border: solid 0px black;
+  text-align:center;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  width:0vh;
+  min-height:5vh;
+  margin-bottom:2vh;
+  margin-right:2vh;
+  background-color: rgb(255, 255, 255);
+  font-size:0em;
+  animation-name: scoreReveal;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode:forwards;
+}
+
+.notFinalScore{
+  animation-duration: 1s;
+}
+
+.scoreUsername{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+  align-items:center;
+  justify-content:center;
+  text-transform: uppercase;
+}
+
+.scorePoint{
+  display:flex;
+  align-items:center; 
+  justify-content:center;
+  width:100%;
+  height:4vh;
+  background-color:#FBE4FF;
+  border-top: solid 2px #D5AAFF;
+  margin:0vh;
+}
+
+#scoreboard{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  width:50%;
+}
+
+#scoreCards{
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content:center;
+  height:100%;
+}
+
+#scoreboardTitle{
+  height:10vh;
+  margin-bottom:-10vh;
+}
+
+/*This is the scoreboard for stage 5*/
+#endScoreboard{
+  display:flex;
+  flex-direction: column;
+  align-items:top;
+  justify-content:center;
+  width:100%;
+  height:100vh
+}
+
+#endScoreCards{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+  height:100%;
+}
+
+/*this is the style for the prompt input*/
+.promptProgressBar{
+  width:70%;
+  height:2vh;
+  margin-bottom:1vh;
+  animation: countdown;
+  animation-duration:120s;
+}
+
+.hidden{
+  opacity:0%;
+  position:absolute;
+  left:0px;
+  top:0px;
+}
+
+/*styling for prompt choice*/
+
+.promptContainerForm{
+  display:flex;
+  flex-direction: row;
+  background-color: white;
+  border: solid 2px black;
+  border-radius:10px;
+  min-height:5vh;
+  margin-bottom:1vh;
+}
+
+.promptContainerSubmit{
+  height:100%;
+  width:20%;
+  border: 0px;
+  border-top-right-radius :10px;
+  border-bottom-right-radius :10px;
+  background-color:#BEE5B0;
+  font-size:0.5em;
+  text-transform:capitalize;
+}
+
+.promptContainerSubmit:hover{
+  cursor:pointer;
+}
+
+.promptLabel{
+  height:100%;
+  width:80%;
+  text-align:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-transform:capitalize;
+  padding:1vh;
+  border-top-left-radius :10px;
+  border-bottom-left-radius :10px;
+}

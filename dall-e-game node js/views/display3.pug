@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  link(rel="preconnect" href="https://fonts.googleapis.com")
+  link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+  link(href="https://fonts.googleapis.com/css2?family=Roboto&family=Rubik:wght@500&display=swap" rel="stylesheet")
+  body(onload='async function delay(n){return new Promise(function(resolve){setTimeout(resolve,n*1000);});};async function main(){var continueloop = true;while (continueloop){await delay(20);window.location="display";};};main()')
+    h1 Here's what you voted for!
+    div(class='doubleColumn')
+
+      div(class='Column')
+
+        if prompts
+            for prompt in prompts
+              div(class='promptContainer')
+                div(class='userPrompt') 
+                  p(class='userWhoWroteThis') #{prompt.user}
+                  p(class='whatTheUserWrote') #{prompt.answer}
+                div(class='usersWhoVoted')
+                  if prompt.point
+                    for point in prompt.point
+                      div(class='voterLabel') #{point}
+      div(class='Column' class= hide_score)
+        h2(id='scoreboardTitle' style='width:0%;font-size:0em;animation-delay:3.5s;animation-name: scoreboardReveal;animation-duration: 1s;animation-iteration-count: 1;animation-fill-mode:forwards;') Total scores so far!
+        div(id='scoreCards')
+          if scores
+            for score in scores
+              div(class='scoreContainer notFinalScore' style= score.delay)
+                p(class='scoreUsername') #{score.user}
+                p(class='scorePoint') #{score.points}

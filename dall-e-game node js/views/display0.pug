@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  link(rel="preconnect" href="https://fonts.googleapis.com")
+  link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+  link(href="https://fonts.googleapis.com/css2?family=Roboto&family=Rubik:wght@500&display=swap" rel="stylesheet")
+  body(id='displayBody' onload='async function delay(n){return new Promise(function(resolve){setTimeout(resolve,n*1000);});};async function main(){var continueloop = true;while (continueloop){await delay(1);window.location="display";};};main()')
+    h1() Waiting for all players to input their usernames
+    div(class='usernameSeparator')
+    if users
+      for user in users
+        div(class='scoreContainerIntro' style='width:30vh;')
+          p(class='scoreUsername') #{user}
+          p(class='scorePoint') 

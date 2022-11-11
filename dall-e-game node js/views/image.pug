@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  link(rel="preconnect" href="https://fonts.googleapis.com")
+  link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+  link(href="https://fonts.googleapis.com/css2?family=Roboto&family=Rubik:wght@500&display=swap" rel="stylesheet")
+  body( onload= onLoadFunction )
+    div(id="game")
+      h2(class='') Please insert a prompt 
+      h3 you have 2 minutes
+      div(class='promptProgressBar')
+      form(action='/image' method='POST')
+        label(for='prompt')
+        input(class='mobile', id="promptInput", type='text', name='prompt') 
+        label(for='username')
+        input(class='hidden', id='usernameInput', type='text', name='username')
+        input(type="submit", value="submit", id="promptSubmit" class="mobile")
+    
+    if errors
+      ul
+        for error in errors
+          li!= error.msg
