@@ -2,7 +2,7 @@
 
 ## What is the game
 
-Like the Jackbox game series the main game is shown on a TV and players can connect via a mobile device on their web browser. Players are shown pre-generated AI generated image, and asked to guess the prompt used to generate it. All prompts, including the real one, are then shown, and players get points if they can guess the correct prompt or if theirs is guessed. 
+Like the Jackbox game series the main game is shown on a TV and players can connect via a web browser on their mobile device. Players are shown pre-generated AI generated image, and asked to guess the prompt used to generate it. All prompts, including the real one, are then shown, and players get points if they can guess the correct prompt or if theirs is guessed. 
 
 ## How to install and run
 
