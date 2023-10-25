@@ -15,5 +15,6 @@ When the players submit a name or answer to the server, the website then needs t
 ## How I would improve it
 
 1. Implement the post request solution listed above
-2. Improve the graphics, I think the beige is pretty drab
-3. Add some sounds, its pretty boring without any
+2. The game is run using python and then the website is hosted using node. Both could have been run with one python or node script, making it easier to run
+3. Improve the graphics, I think the beige is pretty drab
+4. Add some sounds, its pretty boring without any
